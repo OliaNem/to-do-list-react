@@ -1,38 +1,145 @@
+
+body {
+font-family: 'Rubik', sans-serif;
+color: hsl(191, 25%, 27%);
+background-color: hsl(192, 37%, 42%);
+box-sizing: border-box;
+background-image: url("./snow2.png");
+background-repeat: no-repeat;
+background-position: bottom;
+background-size: contain;
+background-attachment: fixed;
+}
+p, li {
+  font-family: 'Roboto', sans-serif;
+}
 .App {
   text-align: center;
+  max-width: 600px;
+  padding: 40px;
+  margin: 30px auto;
+  border-radius: 8px;
+  background-color: hsl(0, 0%, 100%);
+  min-height: 60vh;
+  background-image: url("./App-bg.svg");
+background-repeat: repeat;
+background-position: bottom;
+background-size: cover;
+}
+.Snowflake-one {
+  position: absolute;
+  overflow: hidden;
+}
+.title-span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.4rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.main-container {
+  margin:auto;
+  padding: auto 80px;
+  display: flex; 
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.suggestions-h2 {
+  font-size: 1.2rem;
+  margin-left: 6px;
+  text-align: start;
+  font-weight: 400;
+
+}
+.input-area {
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+label {
+  font-size: 0.9rem;
+  margin-left: 6px;
+}
+input {
+  padding: 6px;
+  margin: 4px auto 10px auto;
+  width: calc(100% - 20px);
+  color:hsl(191, 24%, 22%);
+  border: 1px solid hsl(192, 40%, 53%);
+  border-radius: 5px;
+}
+input:active,
+input:focus {
+  outline: hsl(192, 40%, 53%) dotted;
 }
 
-.App-link {
-  color: #61dafb;
+.buttonAdd, .buttonDelete {
+  padding: 6px;
+  font-size: 1rem;
+  width: 60%; 
+  border: none;
+  border-radius: 5px;
+  margin: 16px auto;
+}
+.buttonAdd {
+  background-color: hsl(171, 27%, 86%);
+  color:hsl(191, 24%, 22%)
+}
+.buttonAdd:hover {
+  background-color:  hsl(171, 27%, 80%);
+  color:hsl(191, 24%, 42%)
+}
+.buttonDelete {
+  background-color: hsl(192, 77%, 95%);
+  color:hsl(191, 24%, 40%)
+}
+.buttonDelete:hover {
+  background-color: hsl(192, 77%, 92%);
+  color:hsl(191, 24%, 56%)
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.crossed-out {
+  text-decoration: line-through 2px hsl(0, 41%, 41%);
+}
+.list-items {
+  width: 100%;
+}
+ul {
+  text-align: left;
+  padding-left: 0;
+}
+.list-item {
+  list-style-type: none;
+  background-color: hsl(191, 65%, 97%);
+  padding: 10px 40px;
+  margin: 10px auto;
+  background-image: url("Snowflake 1.svg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 40px;
+  border-radius: 5px;
+}
+.list-suggestions {
+  display: flex;
+  align-items: center;  
+}
+.delete-box {
+  margin-left: auto;
+}
+
+.Snowflake-box {
+  width:60%;
+  height:50px;
+  margin: 40px auto 0 auto;
+  background-image: url("Snowflake 1.svg");
+  background-repeat: repeat;
+  position: sticky;
+  
+}
+
+@media screen and (max-width: 600px) {
+  .App {
+    padding: 10px;
   }
 }

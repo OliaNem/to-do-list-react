@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import {Projets} from './Projets'
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App-header">
+        <h1>Mes projets <span className="title-span"> pour le temps des fêtes </span></h1>
+        <h2 class="suggestions-h2">Suggestions :</h2>
+        <ul>
+          <li className="list-item">Faire du snowboard</li>
+          <li className="list-item">Jouer aux jeux de socièté avec des amis</li>
+          <li className="list-item">Regarder 5 films de Noël</li>
+        </ul>
+        <br/>
+        <Projets/>
+        <div className='Snowflake-box'></div>
+      </div>
+
     </div>
   );
 }
